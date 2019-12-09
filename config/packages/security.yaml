@@ -1,0 +1,35 @@
+security:
+    encoders:
+        # this internal class is used by Symfony to represent in-memory users
+        Symfony\Component\Security\Core\User\User: 'auto'
+
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        users:
+            memory:
+                users:
+                    user:
+                        # "password"
+                        password: '$argon2id$v=19$m=65536,t=4,p=1$XBbseliElPSp2JGkaFl9TA$fS5123jOW1OiwnwIfuToGHkfd+fl40L0WxIOrZB4vUU'
+                        roles: ['ROLE_USER']
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: lazy
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+            http_basic:
+                realm: Datatidy data
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/auth, roles: ROLE_USER }

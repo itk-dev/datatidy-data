@@ -13,5 +13,5 @@ git clone https://github.com/itk-dev/datatidy-data
 To add or update a data source, run
 
 ```sh
-php index.php «urls»
+bin/console app:data:add-url «urls»
 ```
