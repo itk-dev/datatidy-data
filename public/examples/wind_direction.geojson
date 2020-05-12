@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dokk1",
+        "wind_direction": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2108272,
+          56.1539574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aarhus Rådhus",
+        "wind_direction": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2008397,
+          56.1525791
+        ]
+      }
+    }
+  ]
+}
+
